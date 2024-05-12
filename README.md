@@ -13,4 +13,6 @@ A primeira etapa necessária para a realização desse projeto é a atualizaçã
 
 5 - Para o funcionamento apropriado do comando bne precisamos que antes do "PCSrc" tenhamos uma porta xor com o "Zero" e "funct3" para que o programa diferencie entre o comando bne e beq
 
-Após essas modificações serem feitas no risc-V v1.0 teremos todo o necessário para a inclusão do sequinte código na instrução de memória
+Após essas modificações serem feitas no risc-V v1.0 teremos todo o necessário para a inclusão do sequinte código na instrução de memória:
+
+"lb 
