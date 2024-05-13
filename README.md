@@ -15,4 +15,48 @@ A primeira etapa necessária para a realização desse projeto é a atualizaçã
 
 Após essas modificações serem feitas no risc-V v1.0 teremos todo o necessário para a inclusão do sequinte código na instrução de memória:
 
-"lb 
+"lb x2, 0xFF(x0)
+
+addi x3, zero, 1
+
+addi x5, zero, 1
+
+beq x2, x5, done
+
+while:
+
+beq x3, x2, end
+
+jal x1, fib
+
+addi x3, x3, 1
+
+jal x0, while
+
+
+end:
+
+addi x6, x6, 0
+
+jal x0, fim 
+
+
+done:
+
+addi x6, x5, 0
+
+jal x0, fim
+
+
+fib:
+add x6, x5, x4
+
+addi x4, x5, 0
+
+addi x5, x6, 0
+
+jalr zero, ra, 0
+
+fim: "
+
+Sendo as chaves SW[7:0] que irá determinar o exato termo da sequência de Fibonacchi que você deseja
